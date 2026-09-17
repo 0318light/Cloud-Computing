@@ -16,7 +16,7 @@ def root():
 @app.get("/todos")
 # GET http://127.0.0.1:8000/todos
 def get_todos():
-    return todos
+    return todos # todos 전부 다 리턴
 
 # 경로 파라미터 - 와일드 카드 (*)
 @app.get("/todos/{id}")     # {} 부분은 경로 파라미터
@@ -37,9 +37,9 @@ def get_todo(id: int):
 # POST의 경우 BODY는 반드시 전달해야 하는 것은 아니지만
 # 생성의 목적이기 때문에 생성에 필요한 데이터를 함께 전달
 @app.post("/todos")
-# POST http://127.0.0.1:8000/todos
-# Content-Type: application/json -------> "HTTP 요청 헤더이며 보내는 요청 본문(body)의 데이터 형식이 JSON"
-# 
+# POST http://127.0.0.1:8000/todos (post 경로)
+# Content-Type: application/json -------> "HTTP 요청 헤더이며 보내는 요청 본문(body)의 데이터 형식이 JSON" (헤더)
+# ({4~7} -> body)
 # {
 #   "title": "우유 사기",
 #   "completed": false
