@@ -56,7 +56,7 @@ def root():
 # GET http://127.0.0.1:8000/todos?completed=false
 def get_todos(completed: bool = None):
     if completed is None:   # GET http://127.0.0.1:8000/todos 에 해당
-        return todos
+        return todos    
     return [todo for todo in todos if todo["completed"] == completed]
     # 1. 함수가 반환한 리스트(딕셔너리들의 리스트)를 FastAPI (Pydantic)이 받음
     #    이 시점에서 받은 리스트는 다음과 같은 모습으로서 TodoOut 인스턴스는 아직 아님

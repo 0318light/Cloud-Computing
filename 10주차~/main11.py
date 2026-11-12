@@ -15,8 +15,8 @@ todos = [
 
 
 # 1. 기본 개념: 의존성이 또 다른 의존성을 가질 수 있음 (중첩)
-# A = Depends(B)
-# B = Depends(C)
+# A = Depends(B) # A는 B에 의존
+# B = Depends(C) # B는 C에 의존
 # A > B > C
 
 def get_completed_filter(completed: bool | None = None):
