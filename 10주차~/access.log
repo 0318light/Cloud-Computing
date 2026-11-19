@@ -1,0 +1,3 @@
+GET /todos 요청 처리
+GET /todos/error2 요청 처리
+에러 발생: 어떤 문제가 발생함
